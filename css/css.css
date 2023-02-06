@@ -71,7 +71,7 @@ a{
 
 @media(max-width:768px){
 	.hamburger{
-	 display: block;
+	display: block;
 	}
 
 	.hamburger.active .bar:nth-child(2){
