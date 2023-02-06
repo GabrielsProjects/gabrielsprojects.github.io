@@ -10,7 +10,7 @@
 }
 
 header{
-	background-color: #959396;
+	background-color: #6b5980;
 }
 
 li{
@@ -38,10 +38,15 @@ a{
 }
 
 .nav-branding {
+	font-family: 'Open Sans', sans-serif;
 	font-size: 2rem;
+	font-weight: 700;
 }
 
 .nav-link{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #fff;
 	transition: 0.7s ease;
 }
 
