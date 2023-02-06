@@ -104,3 +104,14 @@ a{
 		left: 0;
 	}
 }
+
+.me{
+	width: 500px;
+	height: 500px;
+	align-items: left;
+	margin-left: 100px;
+	margin-top: 100px;
+	margin-right: 100px;
+	margin-bottom: 100px;
+	border-radius: 50%;
+}
