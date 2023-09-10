@@ -71,7 +71,7 @@ body {
     transition: color 0.2s ease;
 }
 
-/* - About Section - */
+/* - Home Flexbox - */
 .flex-container {
     display: flex;
     align-items: flex-start; 
@@ -89,10 +89,7 @@ body {
     height: calc(50vh - 65px);
 }
 
-.body-text {
-    margin-top: 5%;
-}
-
+/* - Picture - */
 #pfp {
     margin: 5px;
     padding: 5px;
@@ -101,19 +98,20 @@ body {
     height: 90%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.1); /* Change color and values as desired */
+    box-shadow: 0 0 5px 5px rgba(6, 165, 140, .05); /* Change color and values as desired */
     animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 5px 5px rgba(6, 165, 140, 0.1);
     }
     100% {
-        box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 10px 10px rgba(6, 165, 140, 0.3);
     }
 }
 
+/* - Text - */
 #name {
 	font-size: 42px;
     font-weight: bold;
@@ -135,6 +133,10 @@ body {
     border-left: 2px solid var(--accent-color);
 }
 
+.body-text {
+    margin-top: 5%;
+}
+
 #resume {
     background-color: var(--accent-color); /* Set the background color to red */
     color: white; /* Set the text color to white */
@@ -144,6 +146,49 @@ body {
     cursor: pointer; /* Change the cursor to a pointer on hover */
     margin-top: 30px;
     margin-left: 10px;
+}
+
+.grid-flex {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 75vh;
+    padding-bottom: 10vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100vh;
+    height: 75vh;
+}
+
+.grid-item {
+    background-color: #2a2a35;
+	border-radius: 10px;
+    grid-column: span 1;
+    grid-row: span 1;
+	box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 1);
+	margin-bottom: 25px;
+}
+
+.grid-item:nth-child(1) {
+	background-image: url("https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1106&q=80");
+	background-size: cover; /* Make the background image cover the entire container */
+  background-position: center; /* Center the background image within the container */
+}
+
+.grid-item:nth-child(4) {
+	background-image: url("https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+	background-size: cover; /* Make the background image cover the entire container */
+  background-position: center; /* Center the background image within the container */
+}
+
+.grid-item:nth-child(5) {
+	background-image: url("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+	background-size: cover; /* Make the background image cover the entire container */
+  background-position: center; /* Center the background image within the container */
 }
 
 /* - Arrow Icon - */

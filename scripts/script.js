@@ -19,7 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
     homeListItem.onclick = function(e) {
         e.preventDefault(); // Prevent default link behavior
         changeColorToGrey(this);
-        scrollToSection("home");
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
     };
 
     projectsListItem.onclick = function(e) {
