@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get references to the list items by their IDs
-    var homeListItem = document.getElementById("nav-about");
+    var homeListItem = document.getElementById("nav-home");
     var projectsListItem = document.getElementById("nav-projects");
     var linksListItem = document.getElementById("nav-links");
     var fixedIcon = document.querySelector(".fixed-icon");
@@ -8,18 +8,18 @@ document.addEventListener("DOMContentLoaded", function() {
     function changeColorToGrey(item) {
         var link = item.querySelector('a');
         link.classList.add('menu-item-clicked');
-        link.style.color = '#D3D3D3';
+        link.style.color = '#08f1cc';
         setTimeout(function() {
             link.style.color = '';
             link.classList.remove('menu-item-clicked');
-        }, 300); // Reset to white after 0.3 seconds
+        }, 200); // Reset to white after 0.3 seconds
     }
 
     // Add an onclick event handler to each list item
     homeListItem.onclick = function(e) {
         e.preventDefault(); // Prevent default link behavior
         changeColorToGrey(this);
-        scrollToSection("about");
+        scrollToSection("home");
     };
 
     projectsListItem.onclick = function(e) {
@@ -56,4 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
         fixedIcon.style.opacity = "1"; // Fade in the arrow
     }
     });
+
+    // Get the "View Resume" button by its ID
+    var resumeButton = document.getElementById("resume");
+
+    // Add a click event handler to the button
+    resumeButton.onclick = function() {
+        // Get the PDF document URL from the data attribute
+        var pdfUrl = this.getAttribute("data-pdf-url");
+
+        // Open the PDF document in a new tab
+        if (pdfUrl) {
+            window.open(pdfUrl, '_blank');
+        }
+    };
 });
