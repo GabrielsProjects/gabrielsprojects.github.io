@@ -114,7 +114,6 @@ main {
 
 .link-box {
     display: flex;
-    flex: 2 1;
     width: 100%;
     align-items: center;
     justify-content: flex-start;
@@ -294,8 +293,7 @@ footer {
         flex-direction: column; /* Stack text elements vertically */
         align-items: center; /* Center text horizontally */
         justify-content: flex-start; /* Center text vertically */
-        height: 100%; /* Ensure the text takes up the full height */
-        width: 100%; /* Set the width to 100% for screens under 700px */
+        width: 80vw; /* Set the width to 100% for screens under 700px */
     }
 	.column {
 		width: 100%;
@@ -307,6 +305,10 @@ footer {
         align-items: center; /* Center content horizontally */
         margin: 0;
         padding-right: 0;
+    }
+
+    .link-box {
+        justify-content: center;
     }
 
     .cards {
