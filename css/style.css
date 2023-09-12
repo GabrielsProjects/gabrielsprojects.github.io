@@ -269,7 +269,7 @@ footer {
 #bottom-arrow {
     position: fixed;
     bottom: 1vh;
-    left: 50vw;
+    left: 49.2vw;
     font-size: 32px; /* Adjust the font size as needed */
     z-index: 1000;
     opacity: 40%;
