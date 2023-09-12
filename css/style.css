@@ -1,0 +1,365 @@
+:root {
+	--main-color: #171921;
+	--accent-color: rgb(6, 165, 140, .2);
+	--accent-color-2: rgb(6, 165, 140, .8)
+}
+
+body {
+	background-color: var(--main-color);
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.0rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* - Navbar Header - */
+header {
+	position: sticky;
+	top: 0;
+	align-items: center;
+	justify-content: center;
+	height: 10vh;
+}
+
+.menu {
+	padding: 10px;
+	margin-top: 0;
+	align-items: center;
+	justify-content: center;	
+	display: flex;
+	z-index: 100;
+	background-color: #171921;
+	box-shadow: 0px 5px 10px var(--accent-color);
+}
+
+.menu > li {
+	list-style: none;
+	margin-right: 10px;
+}
+
+.menu > li > a {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 10px;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: white;
+	position: relative;
+}
+
+.menu > li > a:hover {
+	color: rgb(6, 165, 140);
+	transition: color .3s ease;
+}
+
+.menu > li > a::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	border-bottom: 3px solid rgb(6, 165, 140);
+	transition: width 0.3s ease;
+}
+
+.menu > li > a:hover::before {
+	width: 100%;
+}
+
+/* Create a flex container to hold the rows */
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically by default */
+}
+
+main {
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+
+/* Style for each row */
+.row {
+    height: 100vh; /* Each row takes up 100vh in height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.row:first-child {
+    height: 90vh;
+}
+
+#about {
+    height: 90vh;
+}
+
+/* Style for nested columns */
+.column {
+    flex: 1; /* Distribute available space equally between columns */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link-box {
+    display: flex;
+    flex: 2 1;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.link-box a {
+    height: 100%;
+}
+
+.medium-image {
+    display: inline-block;
+    position: relative;
+}
+
+.medium-image a {
+    display: block;
+}
+
+.medium-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+footer {
+	height: 10vh;
+	border: 2px solid grey;
+}
+
+/* Style for the image column */
+.column-pfp {
+    justify-content: flex-end; /* Align content to the right side */
+    padding-right: 3vw;
+    align-items: end; /* Center content vertically */
+    overflow: visible;
+    height: 50vh;
+}
+
+/* Style for images within columns */
+.column-pfp img {
+    max-width: 90%; /* Ensure the image fits the column width */
+    max-height: 90%; /* Ensure the image fits the column height */
+    margin: 20px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px var(--accent-color-2);
+    border-radius: 50%;
+    animation: boxShadowAnimation 2s infinite alternate;
+}
+
+.text-box {
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-box h1 {
+	font-size: 42px;
+    margin: 0;
+}
+
+.text-box h2 {
+	font-size: 22px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.text-box p {
+    margin: 0;
+    padding: 5px;
+    margin-left: 5px;
+    border-left: 5px solid var(--accent-color-2);
+    margin-left: 10px;
+}
+
+.resume-button {
+    background-color: var(--accent-color-2);
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.cards {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    width: 33.33%;
+    height: 50%;
+    margin: 10px;
+    border-radius: 20px;
+    position: relative;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+.cards h1 {
+    text-shadow:
+        -1px -1px 2px black,   /* top-left shadow */
+        1px -1px 2px black,   /* top-right shadow */
+        -1px  1px 2px black,   /* bottom-left shadow */
+        1px  1px 2px black;   /* bottom-right shadow */
+    font-size: 2em;
+}
+
+.cards p {
+	z-index: 100;
+    text-shadow:
+        -1px -1px 2px black,   /* top-left shadow */
+        1px -1px 2px black,   /* top-right shadow */
+        -1px  1px 2px black,   /* bottom-left shadow */
+        1px  1px 2px black;   /* bottom-right shadow */
+}
+
+.cards img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+	filter: blur(0px);
+    transition: filter 1s ease;
+}
+
+.cards:hover img {
+    filter: blur(2px);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    z-index: 100;
+}
+
+.card-content:hover {
+	opacity: 100;
+}
+
+#bottom-arrow {
+    position: fixed;
+    bottom: 1vh;
+    left: 50vw;
+    font-size: 32px; /* Adjust the font size as needed */
+    z-index: 1000;
+    opacity: 40%;
+    animation: bounceAnimation 2s infinite alternate;
+    transition: opacity .5s ease;
+    cursor: pointer;
+}
+
+
+/* Media query for screens under 700px */
+@media screen and (orientation: portrait) {
+    /* Change flex direction to column for the first row */
+    .flex-container .row {
+        flex-direction: column;
+    }
+
+    /* Center text at the top */
+    .text-box {
+        display: flex;
+        flex-direction: column; /* Stack text elements vertically */
+        align-items: center; /* Center text horizontally */
+        justify-content: flex-start; /* Center text vertically */
+        height: 100%; /* Ensure the text takes up the full height */
+        width: 100%; /* Set the width to 100% for screens under 700px */
+    }
+	.column {
+		width: 100%;
+	}
+
+    /* Adjust the image column styles for mobile */
+    .column-pfp {
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        margin: 0;
+        padding-right: 0;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    header {
+        display: none;
+    }
+
+    .row:first-child {
+        height: 100vh;
+    }
+
+    .text-box h1 {
+        text-align: center;
+        padding-left: 0;
+        margin-left: 0;
+        font-size: 7vw;
+    }
+
+    .text-box h2 {
+        text-align: center;
+        padding-left: 0;
+        margin-left: 0;
+        font-size: 3vw;
+    }
+
+    .text-box p {
+        border-left: 0px solid var(--accent-color-2);
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .resume-button {
+        font-size: 4vw;
+    }
+}
+
+@keyframes boxShadowAnimation {
+    0% {
+        box-shadow: 0 0 10px rgba(6, 165, 140, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(6, 165, 140, 0.7);
+    }
+}
+
+@keyframes bounceAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(7px)
+    }
+}

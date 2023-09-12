@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script src="scripts/script.js"></script>
-  <script src="https://kit.fontawesome.com/ed0a633bb0.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<ul class="menu">
-  <li id="nav-home"><a href="#home">Home</a></li>
-  <li id="nav-projects"><a href="#projects">Projects</a></li>
-  <li id="nav-links"><a href="#links">Links</a></li>
-</ul>
-  <section id="home">
-      <div class="flex-container">
-            <div class="flex-item">
-              <img id="pfp" src="img/pfp.jpg" alt="Picture of Me">
-            </div>
-            <div class="flex-item body-text">
-              <p id="name">Gabriel Davis</p>
-              <p id="location">Jacksonville, FL 🌴</p>
-              <p id="main-body">I'm dedicated to helping unlock insights through data and transforming information into actionable intelligence. Experienced with Data Analysis through Python/SQL and Data Presentation through Power BI/Tableu.</p>
-              <button id="resume" data-pdf-url="pdf/resume.pdf">View Resume</button>
-            </div>
-      </div>
-  </section>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Gabriels Projects</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://kit.fontawesome.com/ed0a633bb0.js" crossorigin="anonymous"></script>
+		<script src="scripts/script.js"></script>
+	</head>
+	<body id="top">
+		<header>
+			<ul class=menu>
+				<li id=nav-about><a href="#">About</a></li>
+				<li id=nav-projects><a href="#projects">Projects</a></li>
+			</ul>
+		</header>
 
-  <section id="projects">
-    <div class="grid-flex">
-      <div class="grid-container">
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="links">
-  </section>
-
-  <div class="fixed-icon">
-    <i class="fa-solid fa-angle-down"></i>
-</div>
-</body>
+		<main>
+			<div class="flex-container">
+				<i id="bottom-arrow" class="fa-solid fa-angle-down"></i>
+			</div>
+			<div class="flex-container">
+				<section id="about">
+					<div class="row">
+						<div class="column column-pfp">
+							<img src="img/pfp.jpg">
+						</div>
+						<div class="column">
+							<div class="text-box">
+								<h1>Gabriel Davis</h1>
+								<h2>Data Analyst | Jacksonville, FL 🌴</h2>
+								<p>I'm dedicated to helping unlock insights through data and transforming information into actionable intelligence. Experienced with Data Analysis through Python/SQL and Data Presentation through Power BI/Tableu.</p>
+							</div>
+							<div class="link-box">
+								<a href="pdf/resume.pdf" target="_blank"><button class="resume-button">View Resume</button></a>
+								<div class="medium-image">
+									<a href="https://medium.com/@gabrieldavis24" target="_blank"><img src="img/medium-icon.png"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="projects">
+					<div class="row">
+						<div id="card-1" class="cards">
+							<div class="card-content">
+								<h1>Project Name</h1>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestiae eligendi quis dicta autem nobis, nostrum soluta doloribus exercitationem vero molestias! Facilis reiciendis asperiores repudiandae!</p>
+							</div>
+							<img src="https://images.unsplash.com/photo-1694016899147-614072d7dd2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80">
+						</div>
+						<div id="card-2"class="cards">
+							<div class="card-content">
+								<h1>Project Name 2</h1>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores magni adipisci iusto deserunt impedit natus amet, excepturi recusandae id laboriosam, odit a!</p>
+							</div>
+								<img src="https://plus.unsplash.com/premium_photo-1686090449936-acfc6bc38f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+						</div>
+						<div id="card-3" class="cards">
+							<div class="card-content">
+								<h1>Project Name 3</h1>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, expedita.</p>
+							</div>
+							<img src="https://images.unsplash.com/photo-1694024682316-521340fc1bad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</body>
 </html>
